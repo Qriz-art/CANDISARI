@@ -1,14 +1,15 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
+import { hotel } from "@/lib/hotel-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://candisarihotel.com";
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/rooms`,
@@ -25,8 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      changeFrequency: "yearly",
+      priority: 0.6,
     },
   ];
+
+  return staticPages;
 }

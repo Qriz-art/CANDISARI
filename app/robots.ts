@@ -1,13 +1,16 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = "https://candisarihotel.com";
+
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
+        disallow: [],
       },
     ],
-    sitemap: "https://candisarihotel.com/sitemap.xml",
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

@@ -8,6 +8,28 @@ import { hotel } from "@/lib/hotel-data";
 export const metadata: Metadata = {
   title: `Kontak - ${hotel.name}`,
   description: `Hubungi ${hotel.name} di ${hotel.phone}. ${hotel.address}`,
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://candisarihotel.com/contact",
+    siteName: hotel.name,
+    title: `Kontak - ${hotel.name}`,
+    description: `Hubungi ${hotel.name} di ${hotel.phone}. ${hotel.address}`,
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: hotel.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Kontak - ${hotel.name}`,
+    description: `Hubungi ${hotel.name} di ${hotel.phone}. ${hotel.address}`,
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ContactPage() {

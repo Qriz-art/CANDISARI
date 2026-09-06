@@ -7,6 +7,28 @@ import { hotel } from "@/lib/hotel-data";
 export const metadata: Metadata = {
   title: `Galeri - ${hotel.name}`,
   description: `Lihat suasana dan keindahan ${hotel.name} melalui galeri foto kami.`,
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://candisarihotel.com/gallery",
+    siteName: hotel.name,
+    title: `Galeri - ${hotel.name}`,
+    description: `Lihat suasana dan keindahan ${hotel.name} melalui galeri foto kami.`,
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: hotel.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Galeri - ${hotel.name}`,
+    description: `Lihat suasana dan keindahan ${hotel.name} melalui galeri foto kami.`,
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function GalleryPage() {

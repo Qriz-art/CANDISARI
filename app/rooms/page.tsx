@@ -8,6 +8,28 @@ import { hotel } from "@/lib/hotel-data";
 export const metadata: Metadata = {
   title: `Kamar - ${hotel.name}`,
   description: `Pilih kamar terbaik di ${hotel.name}. ${hotel.description}`,
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://candisarihotel.com/rooms",
+    siteName: hotel.name,
+    title: `Kamar - ${hotel.name}`,
+    description: `Pilih kamar terbaik di ${hotel.name}. ${hotel.description}`,
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: hotel.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Kamar - ${hotel.name}`,
+    description: `Pilih kamar terbaik di ${hotel.name}. ${hotel.description}`,
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function RoomsPage() {
