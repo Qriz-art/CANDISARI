@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-cream: #faf7f2;
+  --color-cream-dark: #f0ebe3;
+  --color-beige: #e8dfd4;
+  --color-beige-dark: #d4c9b8;
+  --color-warm-white: #fefdfb;
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a843;
+  --color-gold-dark: #8b6914;
+  --color-green-deep: #1a3a2a;
+  --color-green-medium: #2d5a3f;
+  --color-green-light: #4a7c5c;
+  --color-brown-deep: #3d2b1f;
+  --color-brown-medium: #5c3d2e;
+  --color-brown-light: #8b6f5e;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-beige-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brown-light);
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(184, 134, 11, 0.2);
+  color: var(--color-brown-deep);
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Image loading animation */
+.img-loading {
+  background: linear-gradient(90deg, var(--color-cream) 25%, var(--color-cream-dark) 50%, var(--color-cream) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold), var(--color-gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
