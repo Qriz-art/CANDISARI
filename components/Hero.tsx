@@ -14,10 +14,9 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop')" }}
+          style={{ backgroundImage: "url('/hero.png')" }}
         />
         {/* Fallback gradient if no image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-deep via-green-medium to-brown-deep" />
       </div>
 
       {/* Gradient Overlay */}

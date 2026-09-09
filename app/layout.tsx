@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description: hotel.meta.description,
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/candisari.png",
         width: 1200,
         height: 630,
         alt: "Candisari Hotel & Resto - Hotel Bintang 3 di Kebumen",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: hotel.meta.title,
     description: hotel.meta.description,
-    images: ["/images/og-image.jpg"],
+    images: ["/candisari.png"],
   },
   alternates: {
     canonical: "https://candisarihotel.com",
